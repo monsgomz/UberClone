@@ -12,6 +12,11 @@
 		C222AC0E2C387D1A0024340C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C222AC0D2C387D1A0024340C /* Preview Assets.xcassets */; };
 		C222AC1C2C387F290024340C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C222AC1B2C387F290024340C /* HomeView.swift */; };
 		C222AC1E2C387FCE0024340C /* MapViewRepresentative.swift in Sources */ = {isa = PBXBuildFile; fileRef = C222AC1D2C387FCE0024340C /* MapViewRepresentative.swift */; };
+		C222AC202C38827A0024340C /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C222AC1F2C38827A0024340C /* LocationManager.swift */; };
+		C222AC262C3C8B950024340C /* LocationSearchActivationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C222AC252C3C8B950024340C /* LocationSearchActivationView.swift */; };
+		C222AC282C3C93EF0024340C /* MapActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C222AC272C3C93EF0024340C /* MapActionButton.swift */; };
+		C222AC2A2C3C9AD90024340C /* LocationSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C222AC292C3C9AD90024340C /* LocationSearchView.swift */; };
+		C222AC2C2C3F312E0024340C /* LocationSearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C222AC2B2C3F312E0024340C /* LocationSearchResultCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +26,11 @@
 		C222AC0D2C387D1A0024340C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C222AC1B2C387F290024340C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		C222AC1D2C387FCE0024340C /* MapViewRepresentative.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewRepresentative.swift; sourceTree = "<group>"; };
+		C222AC1F2C38827A0024340C /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		C222AC252C3C8B950024340C /* LocationSearchActivationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchActivationView.swift; sourceTree = "<group>"; };
+		C222AC272C3C93EF0024340C /* MapActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapActionButton.swift; sourceTree = "<group>"; };
+		C222AC292C3C9AD90024340C /* LocationSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchView.swift; sourceTree = "<group>"; };
+		C222AC2B2C3F312E0024340C /* LocationSearchResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchResultCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,8 +93,8 @@
 		C222AC152C387EB40024340C /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				C222AC1A2C387F1E0024340C /* Views */,
-				C222AC192C387F160024340C /* ViewModels */,
+				C222AC222C3C8B260024340C /* Home */,
+				C222AC212C3C8AFB0024340C /* LocationSearch */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -99,6 +109,7 @@
 		C222AC172C387ED10024340C /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				C222AC1F2C38827A0024340C /* LocationManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -124,6 +135,42 @@
 				C222AC1D2C387FCE0024340C /* MapViewRepresentative.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		C222AC212C3C8AFB0024340C /* LocationSearch */ = {
+			isa = PBXGroup;
+			children = (
+				C222AC242C3C8B730024340C /* ViewModel */,
+				C222AC232C3C8B680024340C /* Views */,
+			);
+			path = LocationSearch;
+			sourceTree = "<group>";
+		};
+		C222AC222C3C8B260024340C /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				C222AC192C387F160024340C /* ViewModels */,
+				C222AC1A2C387F1E0024340C /* Views */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		C222AC232C3C8B680024340C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C222AC252C3C8B950024340C /* LocationSearchActivationView.swift */,
+				C222AC272C3C93EF0024340C /* MapActionButton.swift */,
+				C222AC292C3C9AD90024340C /* LocationSearchView.swift */,
+				C222AC2B2C3F312E0024340C /* LocationSearchResultCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C222AC242C3C8B730024340C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,9 +243,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C222AC2A2C3C9AD90024340C /* LocationSearchView.swift in Sources */,
+				C222AC202C38827A0024340C /* LocationManager.swift in Sources */,
 				C222AC072C387D190024340C /* UberCloneApp.swift in Sources */,
+				C222AC282C3C93EF0024340C /* MapActionButton.swift in Sources */,
 				C222AC1C2C387F290024340C /* HomeView.swift in Sources */,
 				C222AC1E2C387FCE0024340C /* MapViewRepresentative.swift in Sources */,
+				C222AC262C3C8B950024340C /* LocationSearchActivationView.swift in Sources */,
+				C222AC2C2C3F312E0024340C /* LocationSearchResultCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,6 +387,7 @@
 				DEVELOPMENT_TEAM = Z28MDHV9K2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Allow your location to work better";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -364,6 +417,7 @@
 				DEVELOPMENT_TEAM = Z28MDHV9K2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Allow your location to work better";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
