@@ -6,8 +6,12 @@
 //
 
 import SwiftUI
+import MapKit
 
 struct LocationSearchResultCell: View {
+	var title: String
+	var subttitle: String
+	
     var body: some View {
 		HStack(alignment: .center, spacing: 12){
 			
@@ -18,10 +22,10 @@ struct LocationSearchResultCell: View {
 				.frame(width: 40, height: 40)
 			
 			VStack (alignment: .leading){
-				Text("Street name")
+				Text(title)
 					.font(.callout)
 					.bold()
-				Text("info street")
+				Text(subttitle)
 					.fontWeight(.light)
 					.foregroundStyle(Color.gray)
 				Divider()
@@ -34,5 +38,5 @@ struct LocationSearchResultCell: View {
 }
 
 #Preview {
-    LocationSearchResultCell()
+	LocationSearchResultCell(title: "location", subttitle: "12345")
 }

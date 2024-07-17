@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C200E0F42C484EDF0012C61D /* LocationSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C200E0F32C484EDF0012C61D /* LocationSearchViewModel.swift */; };
 		C222AC072C387D190024340C /* UberCloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C222AC062C387D190024340C /* UberCloneApp.swift */; };
 		C222AC0B2C387D1A0024340C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C222AC0A2C387D1A0024340C /* Assets.xcassets */; };
 		C222AC0E2C387D1A0024340C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C222AC0D2C387D1A0024340C /* Preview Assets.xcassets */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C200E0F32C484EDF0012C61D /* LocationSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchViewModel.swift; sourceTree = "<group>"; };
 		C222AC032C387D190024340C /* UberClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UberClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C222AC062C387D190024340C /* UberCloneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UberCloneApp.swift; sourceTree = "<group>"; };
 		C222AC0A2C387D1A0024340C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 		C222AC242C3C8B730024340C /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				C200E0F32C484EDF0012C61D /* LocationSearchViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C200E0F42C484EDF0012C61D /* LocationSearchViewModel.swift in Sources */,
 				C222AC2A2C3C9AD90024340C /* LocationSearchView.swift in Sources */,
 				C222AC202C38827A0024340C /* LocationManager.swift in Sources */,
 				C222AC072C387D190024340C /* UberCloneApp.swift in Sources */,
