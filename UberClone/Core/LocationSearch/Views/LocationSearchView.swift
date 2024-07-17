@@ -56,7 +56,7 @@ struct LocationSearchView: View {
 				.padding(.trailing)
 			}
 			.padding(.leading, 5)
-			.padding(.top, 64)
+			.padding(.top, 65)
 			
 			
 			/// List View
@@ -69,11 +69,8 @@ struct LocationSearchView: View {
 				}
 			}
 			
-			
-			
-			
-			
 		}
+		.background(.white)
     }
 }
 
