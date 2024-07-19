@@ -66,14 +66,17 @@ extension UberMapviewRepresentable { ///Conecta con la vista del mapa
 		
 		//MARK: Helpers
 		
-		///Para seleccionar la ubicacion y hacer la ruta
+		///Para seleccionar la ubicacion y mostrar solo 1 pin en el mapa
 		func addAndSelectAnnotation(withCoordinate coordinate: CLLocationCoordinate2D) {
+			parent.mapView.removeAnnotations(parent.mapView.annotations) //Remueve la ubicacion seleccionada
+			
 			let annotation = MKPointAnnotation()
 			annotation.coordinate = coordinate
-			self.parent.mapView.addAnnotation(annotation) //añade la anotacion al mapa
-			self.parent.mapView.selectAnnotation(annotation, animated: true) //va a estar seleccionada con pin grande
+			parent.mapView.addAnnotation(annotation) //añade la anotacion al mapa
+			parent.mapView.selectAnnotation(annotation, animated: true) //va a estar seleccionada con pin grande
+			parent.mapView.showAnnotations(parent.mapView.annotations, animated: true) //zoom a la ubicacion
 		}
 		
 	}
 }
-
+ 
