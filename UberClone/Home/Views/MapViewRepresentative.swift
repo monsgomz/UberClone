@@ -29,8 +29,8 @@ struct UberMapviewRepresentable: UIViewRepresentable { /// Necesita funciones ob
 	}
 	
 	func updateUIView(_ uiView: UIViewType, context: Context) { ///Para actualizar la vista cuando el usuario cambia de lugar
-		if let selectedLocation = locationViewModel.selectedLocation {
-			debugPrint("DEBUG: Selected location in map \(selectedLocation)")
+		if let coordinate = locationViewModel.selectedLocationCoordiate {
+			debugPrint("DEBUG: Selected coordinates  \(coordinate)")
 		}
 		
 	}
