@@ -13,7 +13,7 @@ import Foundation
 import SwiftUI
 import MapKit
 
-struct UberMapviewRepresentable: UIViewRepresentable { /// Necesita funciones obligatorias para que SwiftUI entienda que hacer
+struct UberMapviewRepresentable: UIViewRepresentable { /// Necesita funciones obligatorias para que SwiftUI entienda que hacer (Parent View)
 	
 	let mapView = MKMapView()
 	let locationManager = LocationManager()
@@ -30,7 +30,7 @@ struct UberMapviewRepresentable: UIViewRepresentable { /// Necesita funciones ob
 	
 	func updateUIView(_ uiView: UIViewType, context: Context) { ///Para actualizar la vista cuando el usuario cambia de lugar
 		if let coordinate = locationViewModel.selectedLocationCoordiate {
-			debugPrint("DEBUG: Selected coordinates  \(coordinate)")
+			context.coordinator.addAndSelectAnnotation(withCoordinate: coordinate)
 		}
 		
 	}
@@ -45,19 +45,35 @@ struct UberMapviewRepresentable: UIViewRepresentable { /// Necesita funciones ob
 extension UberMapviewRepresentable { ///Conecta con la vista del mapa
 	
 	class MapCoordinator: NSObject, MKMapViewDelegate { ///Este es el coordinador que hace todas las funciones
+		
+		//MARK: Propiedades
 		let parent: UberMapviewRepresentable
 		
+		//MARK: LifeCycle
 		init(parent: UberMapviewRepresentable) {
 			self.parent = parent
 			super.init()
 		}
 		
-		func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) { //Aqui se manejan todas las actualizacion de ubicacion  
+		//MARK: MKMapViewDelegate
+		
+		func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) { //Aqui se manejan todas las actualizacion de ubicacion
 			let region = MKCoordinateRegion(
 				center: CLLocationCoordinate2D(latitude: userLocation.coordinate.latitude, longitude: userLocation.coordinate.longitude), span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05))
 			
 			parent.mapView.setRegion(region, animated: true)
 		}
+		
+		//MARK: Helpers
+		
+		///Para seleccionar la ubicacion y hacer la ruta
+		func addAndSelectAnnotation(withCoordinate coordinate: CLLocationCoordinate2D) {
+			let annotation = MKPointAnnotation()
+			annotation.coordinate = coordinate
+			self.parent.mapView.addAnnotation(annotation) //añade la anotacion al mapa
+			self.parent.mapView.selectAnnotation(annotation, animated: true) //va a estar seleccionada con pin grande
+		}
+		
 	}
 }
 
