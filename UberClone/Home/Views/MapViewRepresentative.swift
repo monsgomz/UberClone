@@ -17,6 +17,7 @@ struct UberMapviewRepresentable: UIViewRepresentable { /// Necesita funciones ob
 	
 	let mapView = MKMapView()
 	let locationManager = LocationManager()
+	@EnvironmentObject var locationViewModel : LocationSearchViewModel //son instancias diferentes
 	
 	func makeUIView(context: Context) -> some UIView { ///Crea la vista para SwiftUI
 		mapView.delegate = context.coordinator //el coordinador maneja todo
@@ -28,7 +29,9 @@ struct UberMapviewRepresentable: UIViewRepresentable { /// Necesita funciones ob
 	}
 	
 	func updateUIView(_ uiView: UIViewType, context: Context) { ///Para actualizar la vista cuando el usuario cambia de lugar
-		
+		if let selectedLocation = locationViewModel.selectedLocation {
+			debugPrint("DEBUG: Selected location in map \(selectedLocation)")
+		}
 		
 	}
 	

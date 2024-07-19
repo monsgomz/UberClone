@@ -15,7 +15,7 @@ struct HomeView: View {
 				.ignoresSafeArea()
 			
 			if showLocationSearch {
-				LocationSearchView()
+				LocationSearchView(showLocationSearchView: $showLocationSearch)
 			} else {
 				LocationSearchActivationView()
 					.padding(.top, 72)

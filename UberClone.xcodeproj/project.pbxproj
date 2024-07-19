@@ -68,6 +68,7 @@
 				C222AC142C387E9C0024340C /* App */,
 				C222AC152C387EB40024340C /* Core */,
 				C222AC162C387EBF0024340C /* Extensios */,
+				C222AC222C3C8B260024340C /* Home */,
 				C222AC172C387ED10024340C /* Managers */,
 				C222AC182C387EDC0024340C /* Models */,
 				C222AC0A2C387D1A0024340C /* Assets.xcassets */,
@@ -95,7 +96,6 @@
 		C222AC152C387EB40024340C /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				C222AC222C3C8B260024340C /* Home */,
 				C222AC212C3C8AFB0024340C /* LocationSearch */,
 			);
 			path = Core;

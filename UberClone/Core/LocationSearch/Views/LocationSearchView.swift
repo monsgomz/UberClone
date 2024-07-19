@@ -11,8 +11,8 @@ import SwiftUI
 
 struct LocationSearchView: View {
 	@State private var currentLocation = ""
-	@State private var newLocation = ""
-	@StateObject var viewModel = LocationSearchViewModel()
+	@Binding var showLocationSearchView: Bool
+	@EnvironmentObject var viewModel : LocationSearchViewModel
 	
 	
     var body: some View {
@@ -67,6 +67,10 @@ struct LocationSearchView: View {
 				VStack{
 					ForEach(viewModel.results, id: \.self) { result in
 						LocationSearchResultCell(title: result.title, subttitle: result.subtitle)
+							.onTapGesture {
+								viewModel.selectedLocation(result.title)
+								showLocationSearchView.toggle()
+							}
 					}
 				}
 			}
@@ -77,5 +81,5 @@ struct LocationSearchView: View {
 }
 
 #Preview {
-    LocationSearchView()
+	LocationSearchView(showLocationSearchView: .constant(false))
 }

@@ -14,9 +14,25 @@
             filePath = "UberClone/Core/LocationSearch/ViewModel/LocationSearchViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
             landmarkName = "completerDidUpdateResults(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F98AAFEC-703D-4572-893B-9F1024EA1E70"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UberClone/Home/Views/MapViewRepresentative.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "updateUIView(_:context:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
